@@ -1,0 +1,136 @@
+body {
+  /* Colors */
+  /* Neutral */
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  /* Primary */
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  /* Fonts */
+  font-family: "Poppins", sans-serif;
+  color: var(--very-dark-blue);
+  display: flex;
+  justify-content: center;
+}
+
+#text-flex-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+  min-width: 100%;
+  margin-top: 5rem;
+}
+
+#text-flex-container p {
+  width: 35rem;
+  margin: auto;
+  font-weight: 200;
+  color: hsl(234, 12%, 34%, 0.7);
+}
+
+#text-flex-container h1,
+#text-flex-container h2 {
+  font-size: 2.5rem;
+  font-weight: 200;
+}
+
+#text-flex-container h2 {
+  font-weight: 600 !important;
+}
+
+#cards-flex-container {
+  width: 73rem;
+  height: 35rem;
+  display: flex;
+  margin: auto;
+  margin-top: 5rem;
+  margin-bottom: 6rem;
+  gap: 2rem;
+}
+
+.vertical-first,
+.vertical-second,
+.vertical-third {
+  width: 33.33333333%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.vertical-second .card:first-of-type {
+  margin-bottom: 2rem;
+}
+
+.vertical-first .card {
+  border-top: 0.3rem solid var(--cyan);
+}
+
+.vertical-second .card:first-of-type {
+  border-top: 0.3rem solid var(--red);
+}
+
+.vertical-second .card:nth-of-type(2) {
+  border-top: 0.3rem solid var(--orange);
+}
+
+.vertical-third .card:first-of-type {
+  border-top: 0.3rem solid var(--blue);
+}
+
+.card {
+  background-color: var(--very-light-gray);
+
+  width: 100%;
+  height: 17rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding: 2rem 2rem;
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.card p {
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  color: var(--grayish-blue);
+  font-weight: 200;
+  margin-top: -2rem;
+}
+
+.card img {
+  align-self: flex-end;
+}
+
+@media (width <= 1133px) {
+  #cards-flex-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .vertical-third {
+    padding-bottom: 4rem;
+  }
+}
+
+@media (width <= 517px) {
+  #text-flex-container h1,
+  #text-flex-container h2 {
+    font-size: 2rem;
+  }
+
+  #text-flex-container p {
+    width: 20rem;
+  }
+}
